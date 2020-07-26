@@ -5,17 +5,13 @@ class MealDeleteButton extends React.Component {
         super();
     }
     
-    delete = (e) => {
-        //ToDo: odwołać się do elementu DOM i usunąć go
-        alert("delete3");
+    delete = () => {
+        //ToDo: znaleźć inny sposób na odwołanie się do key, zamiast przekazywać key2
+        this.props.delete(this.props.key2);
     }
 
-    render() {
-        var buttonStyle = {
-            float: "right"
-        };
-        
-        return <button style={buttonStyle} onClick={this.delete}>Usuń</button>
+    render() { 
+        return <button className="deleteButton" onClick={this.delete}>Usuń</button>
     }
 }
 
